@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login Form</title>
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap-4.5.0-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/fontawesome-free-5.13.0-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- TO DO -->
+    <!--
+      Add transition for the form where the login and signup inputs
+      slide to reveal. Also add same transition for the top icon
+    -->
+    <div class="container-fluid h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-10 col-md-8 col-xl-6 p-0">
+          <div class="form-container row">
+            <div class="form-img">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="form-login-signup">
+              <div class="form-login col-12 p-0">
+                <input
+                  type="text"
+                  placeholder="Enter Username"
+                  class="form-input d-block"
+                />
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  class="form-input d-block"
+                />
+                <input
+                  type="submit"
+                  class="form-input btn btn-primary"
+                  value="Login"
+                />
+                <a href="#" class="pass-forget d-block">Forgot Password?</a>
+              </div>
+              <!-- End Login Form -->
+
+              <div class="form-signup col-12 p-0 d-none">
+                <input
+                  type="email"
+                  placeholder="Enter Email"
+                  class="form-input d-block"
+                />
+                <input
+                  type="text"
+                  placeholder="Enter Name"
+                  class="form-input d-block"
+                />
+                <input
+                  type="text"
+                  placeholder="Enter Username"
+                  class="form-input d-block"
+                />
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  class="form-input d-block"
+                />
+                <input
+                  type="submit"
+                  class="form-input btn btn-primary"
+                  value="Sign Up"
+                />
+              </div>
+              <!-- End Sign Up Form -->
+            </div>
+
+            <div class="form-toggle">
+              <input type="checkbox" id="input-toggle" />
+              <label for="input-toggle"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById('input-toggle')
+        .addEventListener('input', function() {
+          document.querySelector('.form-img').classList.toggle('icon-signup');
+          document
+            .querySelector('.form-img .fas')
+            .classList.toggle('fa-user-plus');
+          document.querySelector('.form-login').classList.toggle('off-page');
+          document.querySelector('.form-signup').classList.toggle('d-none');
+        });
+    </script>
+  </body>
+</html>
